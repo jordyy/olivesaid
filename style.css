@@ -2,17 +2,19 @@ h1 {
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
+  font-family: "Just Me Again Down Here", cursive;
 }
 
 p {
   font-size: 20px;
   line-height: 1.4;
-  font-family: sans-serif;
+  font-family: "Crafty Girls", cursive;
 }
 
 span {
   text-transform: uppercase;
   font-size: 14px;
+  font-family: "Crafty Girls";
 }
 
 ul {
