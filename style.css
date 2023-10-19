@@ -1,22 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2a2136;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.logo {
+}
+
 h1 {
   font-size: 42px;
   text-transform: uppercase;
-  text-align: center;
   font-family: "Just Me Again Down Here", cursive;
+  color: #f5f3ff;
 }
 
 p {
   font-size: 20px;
   line-height: 1.4;
   font-family: "Crafty Girls", cursive;
+  color: #f5f3ff;
 }
 
 span {
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Crafty Girls";
+  color: #f5f3ff;
 }
 
 ul {
   list-style: none;
+}
+
+.quote {
+  background-color: #3d314d;
+  line-height: 1.4;
+  font-size: 20px;
+  padding: 16px 30px;
+  margin-bottom: 16px;
+}
+
+.quote-form {
+  background-color: #3d314d;
+  margin-bottom: 40px;
 }
