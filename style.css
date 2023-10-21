@@ -75,6 +75,7 @@ ul {
   padding: 16px 24px;
   margin-bottom: 16px;
   letter-spacing: -1;
+  border-radius: 25px;
 
   display: flex;
   align-items: center;
@@ -168,11 +169,28 @@ ul {
 }
 
 .quote-form input::placeholder {
-  color: #a8a29e;
+  color: #cfbaf0;
+  padding-left: 15px;
 }
 
 .quote-form input:first-child {
   flex-grow: 1;
+}
+
+.quote-form input {
+  border-radius: 100px;
+  border: none;
+  line-height: 25px;
+  background-color: #6d597a;
+}
+
+.category-selector {
+  border-radius: 100px;
+  border: none;
+  height: 25px;
+  background-color: #6d597a;
+  color: #cfbaf0;
+  padding: 0 15px;
 }
 
 .quote-form span {
@@ -191,8 +209,8 @@ ul {
     align-items: stretch;
   }
 
-  .fact-form input,
-  .fact-form select {
+  .quote-form input,
+  .quote-form select {
     width: auto;
   }
 }
