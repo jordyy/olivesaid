@@ -11,6 +11,10 @@ body {
   color: #faf5ff;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -131,7 +135,7 @@ ul {
   line-height: 1;
   text-transform: uppercase;
   font-size: 25px;
-  padding: 16px 0 13px;
+  padding: 15px 0 10px;
   background-image: linear-gradient(110deg, #5f0f40, #7209b7, #e879f9, #f5d0fe);
   color: inherit;
   border-radius: 100px;
@@ -144,7 +148,7 @@ ul {
 }
 
 .btn-large {
-  font-size: 30px;
+  font-size: 25px;
   padding: 20px 32px 17px;
 }
 
