@@ -144,7 +144,7 @@ ul {
 }
 
 .btn:hover {
-  transform: scale(110%) rotate(-2deg);
+  transform: scale(110%) translateY(-20px);
 }
 
 .btn-large {
