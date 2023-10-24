@@ -53,6 +53,10 @@ h1 {
   line-height: 1;
 }
 
+.show-form-btn-container {
+  position: relative;
+}
+
 p {
   font-size: 20px;
   line-height: 1.4;
@@ -131,12 +135,12 @@ ul {
 
 .btn {
   border: none;
-  font-family: "Indie Flower", cursive;
+  font-family: "Averia Sans Libre", sans-serif;
   line-height: 1;
   text-transform: uppercase;
+  background-color: #6a994e;
   font-size: 25px;
   padding: 15px 0 10px;
-  background-image: linear-gradient(110deg, #5f0f40, #7209b7, #e879f9, #f5d0fe);
   color: inherit;
   border-radius: 100px;
   cursor: pointer;
@@ -144,7 +148,16 @@ ul {
 }
 
 .btn:hover {
-  transform: scale(110%) translateY(-20px);
+  transform: scale(110%) translateY(-5px);
+  background-image: linear-gradient(
+    110deg,
+    #6a994e,
+    #5390d9,
+    #480ca8,
+    #b5179e,
+    #ff477e,
+    #f27059
+  );
 }
 
 .btn-large {
@@ -164,17 +177,31 @@ ul {
 
 .quote-form {
   background-color: #3d314d;
-  margin-bottom: 40px;
-  padding: 16px 32px;
+  /* margin-bottom: 40px; */
   display: flex;
-  align-items: center;
+  padding-right: 50px;
   gap: 16px;
+  flex-direction: column;
+  width: 300%;
   border-radius: 16px;
+  /* align-items: center; */
+  padding: 16px 32px;
+  position: absolute;
+  top: 80px;
+  right: 1px;
 }
 
 .quote-form input::placeholder {
   color: #cfbaf0;
-  padding-left: 15px;
+  font-size: 16px;
+}
+
+input,
+select,
+textarea {
+  color: #cfbaf0;
+  padding-left: 25px;
+  font-size: 16px;
 }
 
 .quote-form input:first-child {
@@ -184,17 +211,40 @@ ul {
 .quote-form input {
   border-radius: 100px;
   border: none;
-  line-height: 25px;
+  line-height: 45px;
   background-color: #6d597a;
+  width: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .category-selector {
   border-radius: 100px;
   border: none;
-  height: 25px;
+  height: 45px;
   background-color: #6d597a;
   color: #cfbaf0;
-  padding: 0 15px;
+  /* padding: 0px 15px; */
+  padding: 0 25px;
+  font-size: 16px;
+  width: 100%;
 }
 
 .quote-form span {

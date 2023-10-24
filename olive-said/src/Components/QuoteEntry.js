@@ -11,7 +11,7 @@ function Quote({ quote }) {
         <>
           <li className="quote">
             <p>
-              "{quote.text}," said Olive, at the distinguished age of{" "}
+              "{quote.text}," said Olive, at the ripe old age of{" "}
               {quote.age}
             </p>
             <span
