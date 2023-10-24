@@ -4,7 +4,7 @@ export const CATEGORYDATA = [
   { name: "nature", color: "#2db985" },
   { name: "animals", color: "#5390d9" },
   { name: "funny", color: "#f27059" },
-  { name: "health", color: "#b23a48" },
+  { name: "memories", color: "#b23a48" },
   { name: "history", color: "#ff477e" },
   { name: "holidays", color: "#f4b942" },
 ];

@@ -1,37 +1,35 @@
 import React from "react";
 import "../style.css";
-import { CATEGORIES } from "../data";
+import { CATEGORYDATA } from "../data";
 
-function Quote({ quote }) {
-  const [quotes, setQuotes] = useState(initialQuotes);
-
+function QuoteEntry({ quotes }) {
   return (
     <>
-      {/* {quotes.map((quote) => (
+      {quotes.map((quotes) => (
         <>
           <li className="quote">
             <p>
-              "{quote.text}," said Olive, at the ripe old age of{" "}
-              {quote.age}
+              "{quotes.text}"<p>Olive, at the ripe old age of {quotes.age}</p>
             </p>
             <span
-              className="quote"
+              className="category"
               style={{
-                backgroundColor: CATEGORIES.find(
-                  (cat) => cat.name === quote.category
+                backgroundColor: CATEGORYDATA.find(
+                  (category) => category.name === quotes.category
                 ).color,
               }}
             >
-              {quote.category}
+              {quotes.category}
             </span>
             <div className="reaction-buttons">
-              <button>{quote.reaction}</button>
+              <button>😂 {quotes.reactionFunny}</button>
+              <button>🥰 {quotes.reactionLove}</button>
             </div>
           </li>
         </>
-      ))} */}
+      ))}
     </>
   );
 }
 
-export default Quote;
+export default QuoteEntry;

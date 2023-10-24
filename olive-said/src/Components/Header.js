@@ -2,7 +2,7 @@ import React from "react";
 import "../style.css";
 import Form from "./Form";
 
-export default function Header() {
+export default function Header({ setQuotes }) {
   const [showForm, setShowForm] = React.useState(false);
 
   return (
@@ -20,7 +20,11 @@ export default function Header() {
             {showForm ? "close" : "What did she say?!"}
           </button>
           {showForm ? (
-            <Form showForm={showForm} setShowForm={setShowForm} />
+            <Form
+              showForm={showForm}
+              setShowForm={setShowForm}
+              setQuotes={setQuotes}
+            />
           ) : null}
         </div>
       </header>

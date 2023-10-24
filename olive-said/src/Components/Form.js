@@ -2,7 +2,7 @@ import React from "react";
 import "../style.css";
 import { CATEGORYDATA } from "../data";
 
-export default function Form({ showForm, setShowForm }) {
+export default function Form({ showForm, setShowForm, setQuotes }) {
   const [quoteInput, setQuoteInput] = React.useState("");
   const [age, setAge] = React.useState("");
   const [category, setCategory] = React.useState("");
@@ -10,16 +10,18 @@ export default function Form({ showForm, setShowForm }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (quoteInput && age && category) ? {
+    if (quoteInput && age && category) {
       const newQuote = {
-        id: uuid(), 
-        created_at: new Date().getCurrentYear(),
-        text,
+        id: Math.round(Math.random() * 10000),
+        created_at: new Date().getFullYear(),
+        quoteInput,
         category,
         reactionFunny: 0,
         reactionLove: 0,
-        age
-      }
+        age,
+      };
+
+      setQuotes((quotes) => [newQuote, ...quotes]);
     }
 
     setShowForm(!showForm);
