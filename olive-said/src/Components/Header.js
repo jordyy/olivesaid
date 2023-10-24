@@ -14,12 +14,14 @@ export default function Header() {
         </div>
         <div className="show-form-btn-container">
           <button
-            className="btn btn-large"
+            className="btn btn-large form-btn"
             onClick={() => setShowForm((show) => !show)}
           >
             {showForm ? "close" : "What did she say?!"}
           </button>
-          {showForm ? <Form /> : null}
+          {showForm ? (
+            <Form showForm={showForm} setShowForm={setShowForm} />
+          ) : null}
         </div>
       </header>
     </>

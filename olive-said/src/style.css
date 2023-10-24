@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -148,7 +148,7 @@ ul {
 }
 
 .btn:hover {
-  transform: scale(110%) translateY(-5px);
+  transform: scale(110%) skewY(1deg);
   background-image: linear-gradient(
     110deg,
     #6a994e,
@@ -157,6 +157,32 @@ ul {
     #b5179e,
     #ff477e,
     #f27059
+  );
+}
+
+.form-btn:hover {
+  transform: scale(101%) skewY(1deg);
+  background-image: linear-gradient(
+    110deg,
+    #6a994e,
+    #5390d9,
+    #480ca8,
+    #b5179e,
+    #ff477e,
+    #f27059
+  );
+}
+
+.form-btn:focus {
+  transform: none;
+  background-image: linear-gradient(
+    110deg,
+    #f27059,
+    #ff477e,
+    #b5179e,
+    #480ca8,
+    #5390d9,
+    #6a994e
   );
 }
 

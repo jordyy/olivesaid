@@ -3,7 +3,7 @@ import "../style.css";
 import { CATEGORIES } from "../data";
 
 function Quote({ quote }) {
-  // const quotes = quotesData;
+  const [quotes, setQuotes] = useState(initialQuotes);
 
   return (
     <>
