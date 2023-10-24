@@ -11,7 +11,6 @@ export default function App() {
       <body>
         <div class="container">
           <Header />
-          <Form />
           <main className="main">
             <Categories />
             <Quotes />

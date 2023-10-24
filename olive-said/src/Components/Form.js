@@ -3,7 +3,7 @@ import "../style.css";
 
 export default function Form() {
   return (
-    <form className="quote-form hidden">
+    <form className="quote-form">
       <input type="text" placeholder="Today Olive said..." />
       <input type="number" />
       <select className="category-selector">

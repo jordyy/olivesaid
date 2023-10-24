@@ -1,33 +1,14 @@
 import React from "react";
 import "../style.css";
-import CATEGORIES from "../App/src/data.js";
 
-export default function Quotes() {
-  const quotes = quotesData;
-
+export default function QuoteList() {
   return (
-    <>
-      <section>
-        <ul>
-          {quotes.map((quote) => (
-            <>
-              <span
-                className="quote"
-                style={{
-                  backgroundColor: CATEGORIES.find(
-                    (cat) => cat.name === quote.category
-                  ).color,
-                }}
-              >
-                {quote.category}
-              </span>
-              <div className="reaction-buttons">
-                <button>{quote.reaction}</button>
-              </div>
-            </>
-          ))}
-        </ul>
-      </section>
-    </>
+    <section>
+      {/* <ul className="quotes-list">
+        {quote.map((quote) => (
+          <Quote key={quote.id} quote={quote} />
+        ))}
+      </ul> */}
+    </section>
   );
 }
