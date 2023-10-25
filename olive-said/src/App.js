@@ -1,7 +1,7 @@
 import React from "react";
 import Categories from "./Components/Categories";
 import Header from "./Components/Header";
-import QuoteList from "./Components/QuoteList";
+import QuotesList from "./Components/QuotesList";
 import "./style.css";
 import supabase from "./supabase";
 
@@ -22,7 +22,7 @@ export default function App() {
         <Header setQuotes={setQuotes} />
         <main className="main">
           <Categories />
-          <QuoteList quotes={quotes} setQuotes={setQuotes} />
+          <QuotesList quotes={quotes} setQuotes={setQuotes} />
         </main>
       </div>
     </>

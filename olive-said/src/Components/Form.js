@@ -22,6 +22,7 @@ export default function Form({ showForm, setShowForm, setQuotes }) {
       };
 
       setQuotes((quotes) => [newQuote, ...quotes]);
+      console.log(newQuote);
     }
 
     setShowForm(!showForm);
@@ -49,7 +50,7 @@ export default function Form({ showForm, setShowForm, setQuotes }) {
       >
         <option value="">Choose category</option>
         {CATEGORYDATA.map((category) => (
-          <option value="{category.name}">{category.name.toUpperCase()}</option>
+          <option value={category.name}>{category.name.toUpperCase()}</option>
         ))}
       </select>
       <button className="btn form-btn">SUBMIT</button>
