@@ -20,19 +20,23 @@ function QuotesList({ quotes, setQuotes }) {
                 Olive, at the ripe old age of {quotes.age}
               </p>
             </div>
-            <span
-              className="tag"
-              style={{
-                backgroundColor: CATEGORYDATA.find(
-                  (category) => category.color
-                ),
-              }}
-            >
-              {quotes.category}
-            </span>
-            <div className="reaction-buttons">
-              <button>😂 {quotes.reactionFunny}</button>
-              <button>🥰 {quotes.reactionLove}</button>
+            <div className="quote-btn-collection">
+              <div
+                className="tag"
+                style={{
+                  backgroundColor: `${
+                    CATEGORYDATA.find(
+                      (category) => category.name === quotes.category
+                    ).color
+                  }`,
+                }}
+              >
+                {quotes.category}
+              </div>
+              <div className="reaction-buttons">
+                <button>😂 {quotes.reactionFunny}</button>
+                <button>🥰 {quotes.reactionLove}</button>
+              </div>
             </div>
           </li>
         ))}

@@ -47,6 +47,7 @@ body {
 
 h1 {
   font-size: 42px;
+  font-weight: 500;
   text-transform: uppercase;
   font-family: "Just Me Again Down Here", cursive;
   color: #faf5ff;
@@ -69,7 +70,13 @@ p {
   font-size: 15px;
   line-height: 4px;
   border-radius: 100px;
-  padding: 10px;
+  /* padding: 3px; */
+}
+
+.quote-btn-collection {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 span {
@@ -89,6 +96,7 @@ ul {
   margin-bottom: 16px;
   letter-spacing: -1;
   border-radius: 25px;
+  letter-spacing: 2px;
 
   display: flex;
   align-items: center;
@@ -97,9 +105,10 @@ ul {
 }
 
 .quote-subtext {
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-family: "Quicksand";
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -121,8 +130,8 @@ ul {
 
 .reaction-buttons {
   margin-left: auto;
-  flex-shrink: 0;
-
+  flex-shrink: 1;
+  height: 35px;
   display: flex;
   gap: 8px;
 }
@@ -136,8 +145,10 @@ ul {
   color: inherit;
   font-family: sans-serif;
   font-weight: 400;
+  min-width: 50px;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .reaction-buttons button:hover {
@@ -147,13 +158,14 @@ ul {
 .tag {
   text-transform: uppercase;
   font-size: 15px;
-  margin-bottom: 16px;
+  text-align: center;
+  /* margin-right: 40px; */
   font-family: "Averia Sans Libre", sans-serif;
   line-height: 4px;
   border-radius: 100px;
   padding-top: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   height: 30px;
 }
 
@@ -291,7 +303,6 @@ input[type="number"] {
   height: 45px;
   background-color: #6d597a;
   color: #cfbaf0;
-  /* padding: 0px 15px; */
   padding: 0 25px;
   font-size: 16px;
   width: 100%;
