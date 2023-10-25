@@ -37,8 +37,7 @@ export default function App() {
       <div className="container">
         <Header setQuotes={setQuotes} />
         <main className="main">
-          {/* <Categories setCurrentCategory={setCurrentCategory} /> */}
-          <Categories />
+          <Categories setCurrentCategory={setCurrentCategory} />
 
           {isLoading ? (
             <Loader />
