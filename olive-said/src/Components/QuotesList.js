@@ -3,6 +3,9 @@ import "../style.css";
 import { CATEGORYDATA } from "../data";
 
 function QuotesList({ quotes, setQuotes }) {
+  const [reactionFunny, setReactionFunny] = React.useState();
+  const [reactionLove, setReactionLove] = React.useState();
+
   if (quotes.length === 0)
     return (
       <p className="message">
@@ -33,9 +36,16 @@ function QuotesList({ quotes, setQuotes }) {
               >
                 {quotes.category}
               </div>
+
               <div className="reaction-buttons">
-                <button>😂 {quotes.reactionFunny}</button>
-                <button>🥰 {quotes.reactionLove}</button>
+                <button
+                  onClick={() => setReactionFunny(quotes.reactionFunny++)}
+                >
+                  😂 {quotes.reactionFunny}
+                </button>
+                <button onClick={() => setReactionLove(quotes.reactionLove++)}>
+                  🥰 {quotes.reactionLove}
+                </button>
               </div>
             </div>
           </li>

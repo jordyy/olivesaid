@@ -1,27 +1,32 @@
 import React from "react";
 import "../style.css";
 import { CATEGORYDATA } from "../data";
+import supabase from "../supabase";
 
 export default function Form({ showForm, setShowForm, setQuotes }) {
   const [quoteInput, setQuoteInput] = React.useState("");
   const [age, setAge] = React.useState("");
   const [category, setCategory] = React.useState("");
+  const [isUploading, setIsUploading] = React.useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     if (quoteInput && age && category) {
-      const newQuote = {
-        id: Math.round(Math.random() * 10000),
-        created_at: new Date().getFullYear(),
-        quoteInput,
-        category,
-        reactionFunny: 0,
-        reactionLove: 0,
-        age,
-      };
+      setIsUploading(true);
+      const { data: newQuote, error } = await supabase
+        .from("quotes")
+        .insert([
+          {
+            quoteInput,
+            category,
+            age,
+          },
+        ])
+        .select();
+      setIsUploading(false);
 
-      setQuotes((quotes) => [newQuote, ...quotes]);
+      setQuotes((quotes) => [newQuote[0], ...quotes]);
       console.log(newQuote);
     }
 
@@ -35,6 +40,7 @@ export default function Form({ showForm, setShowForm, setQuotes }) {
         value={quoteInput}
         placeholder="Today Olive said..."
         onChange={(e) => setQuoteInput(e.target.value)}
+        disabled={isUploading}
       />
       <input
         type="number"
@@ -42,18 +48,22 @@ export default function Form({ showForm, setShowForm, setQuotes }) {
         className="number-input"
         placeholder="Olive's age when quoted?"
         onChange={(e) => setAge(e.target.value)}
+        disabled={isUploading}
       />
       <select
         value={category}
         className="category-selector"
         onChange={(e) => setCategory(e.target.value)}
+        disabled={isUploading}
       >
         <option value="">Choose category</option>
         {CATEGORYDATA.map((category) => (
           <option value={category.name}>{category.name.toUpperCase()}</option>
         ))}
       </select>
-      <button className="btn form-btn">SUBMIT</button>
+      <button className="btn form-btn" disabled={isUploading}>
+        SUBMIT
+      </button>
     </form>
   );
 }
