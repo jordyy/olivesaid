@@ -26,9 +26,13 @@ export default function Form({ showForm, setShowForm, setQuotes }) {
         .select();
       setIsUploading(false);
 
-      setQuotes((quotes) => [newQuote[0], ...quotes]);
+      if (!error) setQuotes((quotes) => [newQuote[0], ...quotes]);
       console.log(newQuote);
     }
+
+    setQuoteInput("");
+    setAge("");
+    setCategory("");
 
     setShowForm(!showForm);
   }
