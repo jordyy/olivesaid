@@ -28,7 +28,7 @@ function QuotesList({ quotes, setQuotes }) {
       </p>
     );
   return (
-    <>
+    <section>
       <ul className="quotes-list">
         {quotes.map((quote) => (
           <li key={quote.id} className="quote">
@@ -82,7 +82,7 @@ function QuotesList({ quotes, setQuotes }) {
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 }
 

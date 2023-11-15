@@ -7,7 +7,7 @@
 body {
   background-color: #2a2136;
   font-family: "Indie Flower", cursive;
-  padding: 48px 64px;
+  padding: 48px 64px 0px;
   color: #faf5ff;
 }
 
@@ -31,6 +31,13 @@ body {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 48px;
+
+  height: calc(100vh - 48px - 68px - 40px);
+}
+
+section {
+  overflow: scroll;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 900px) {
@@ -315,9 +322,9 @@ input[type="number"] {
 }
 
 @media (max-width: 1000px) {
-  body {
+  /* body {
     padding: 32px 48px;
-  }
+  } */
 
   .quote-form {
     flex-direction: column;
@@ -327,5 +334,31 @@ input[type="number"] {
   .quote-form input,
   .quote-form select {
     width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .quote-form {
+    padding: 16px;
+  }
+
+  .quote {
+    padding: 12px 16px;
   }
 }
